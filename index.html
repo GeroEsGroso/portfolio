@@ -10,18 +10,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            margin: 0;
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Orbitron', Arial, sans-serif;
             color: #ffffff;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            overflow: auto;
         }
 
         body::before {
@@ -31,264 +23,98 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.80);
+            background-color: rgba(0, 0, 0, 0.8);
             z-index: -1;
-        }
-
-        /* Perfil */
-        .profile {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 40px;
-            flex-direction: column;
-        }
-
-        /* Perfil en pantallas grandes */
-        @media (min-width: 768px) {
-            .profile {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
-            }
         }
 
         .profile img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin-right: 20px;
             border: 3px solid #ffffff;
-        }
-
-        .profile .details {
-            text-align: center;
-        }
-
-        /* Alineación a la izquierda en pantallas grandes */
-        @media (min-width: 768px) {
-            .profile .details {
-                text-align: left;
-            }
-
-            .profile h1 {
-                font-size: 3rem;
-                margin-bottom: 10px;
-            }
-
-            .profile p {
-                font-size: 1.2rem;
-            }
-
-            .profile .details a {
-                font-size: 1.2rem;
-            }
-        }
-
-        .profile .details h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .profile .details p {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #bbbbbb;
-            font-weight: 400;
-        }
-
-        .profile .details a {
-            color: #bbbbbb;
-            text-decoration: none;
-            word-wrap: break-word;  /* Permite que el email se ajuste */
-            white-space: normal;    /* Evita que el texto se corte */
-            overflow-wrap: break-word; /* Asegura que el email se ajuste en pantallas pequeñas */
-            font-size: 1.5rem; /* Tamaño por defecto */
-            display: inline-flex; /* Para alinear el icono correctamente */
-            align-items: center; /* Alinea el icono con el texto */
-        }
-
-        /* Ajustes en móvil */
-        @media (max-width: 767px) {
-            .profile .details a {
-                font-size: 1rem;  /* Reduce el tamaño del texto en móviles */
-            }
-
-            .profile .details i {
-                font-size: 1.2rem; /* Ajusta el tamaño del icono para que se vea bien */
-                margin-right: 8px; /* Espacio entre el icono y el texto */
-            } 
-
-            .profile h1 {
-                font-size: 1.8rem; /* Reduce el tamaño del nombre */
-                margin-bottom: 5px;
-            }
-
-            .profile p {
-                font-size: 1.2rem; /* Reduce el tamaño del texto de la profesión */
-            }
-
-            .profile img {
-                width: 120px;
-                height: 120px; /* Hace la imagen más pequeña en móviles */
-            }
-        }
-
-        /* Sección de portafolio */
-        .portfolio-section {
-            width: 100%;
-            text-align: center;
-        }
-
-        .portfolio-section h2 {
-            margin-bottom: 30px;
-            font-size: 2rem;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        /* Grid de portafolio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .portfolio-item {
-            background-color: rgba(51, 51, 51, 0.8);
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s, background-color 0.3s;
-            font-size: 1rem;
-            font-weight: 400;
-        }
-
-        .portfolio-item:hover {
-            transform: scale(1.05);
-            background-color: rgba(85, 85, 85, 0.9);
-        }
-
-        .portfolio-item a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: 700;
         }
 
         .portfolio-item img {
             width: 100%;
             height: auto;
-            margin-top: 10px;
             border-radius: 5px;
         }
-
-        /* Cambiar el tamaño del contenido a partir de un cierto tamaño de pantalla */
-        @media (min-width: 1024px) {
-            .profile {
-                width: 80%;
-                margin-left: 5%;
-            }
-
-            .portfolio-section {
-                width: 80%;
-                margin-left: 5%;
-            }
-        }
-
-        /* Agregar saltos de línea condicionales */
-        .spacers {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .spacers.smallscreen {
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .spacers.largescreen {
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-
     </style>
 </head>
-<body>
+<body class="d-flex flex-column justify-content-center align-items-center p-3">
 
-<!-- Aquí agregas los saltos de línea con la clase spacers -->
-<div class="spacers smallscreen">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
-
-<div class="spacers largescreen">
-    <br><br><br><br><br><br><br><br><br><br><br><br>    
-</div>
-
-    <br><br><br><br><br><br>
-    <div class="profile">
-        <img src="profile.jpg" alt="Gerónimo Garzón">
-        <div class="details">
-            <h1>Gerónimo Garzón</h1>
-            <p>Web Developer</p>
+    <!-- Perfil -->
+    <div class="profile text-center text-md-start d-flex flex-column flex-md-row align-items-center mb-5">
+        <img src="profile.jpg" alt="Gerónimo Garzón" class="me-md-4">
+        <div>
+            <h1 class="fw-bold">Gerónimo Garzón</h1>
+            <p class="fw-bold">Web Developer</p>
             <p>
-                <a href="mailto:geronimo.garzon.jacob@gmail.com" style="color: #bbbbbb;">
-                    <i class="fas fa-envelope"></i> &nbsp; geronimo.garzon.jacob@gmail.com
+                <a href="mailto:geronimo.garzon.jacob@gmail.com" class="text-decoration-none text-light">
+                    <i class="fas fa-envelope"></i> geronimo.garzon.jacob@gmail.com
                 </a>
             </p>
-            <br>
             <p>
-                <a href="cv.pdf" style="color: #bbbbbb;" target="_blank">
-                    <i class="fas fa-download"></i> &nbsp; Descargar CV
+                <a href="cv.pdf" class="text-decoration-none text-light" target="_blank">
+                    <i class="fas fa-download"></i> Descargar CV
                 </a>
             </p>
         </div>
     </div>
-    <br><br><br>
-    <div class="portfolio-section">
-        <h2>Mis Proyectos</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <a href="1/" target="_blank">EcoLife &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                          
-                    <img src="1.png" alt="Imagen Proyecto 1">
-                </a>
+
+    <!-- Portafolio -->
+    <div class="portfolio-section container text-center">
+        <h2 class="fw-bold">Mis Proyectos</h2>
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item bg-dark p-3 rounded">
+                    <a href="1/" target="_blank" class="text-decoration-none text-light">
+                        EcoLife
+                        <img src="1.png" alt="Imagen Proyecto 1" class="mt-3">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <a href="2/" target="_blank">Diseño Web Profesional
-                    <img src="2.png" alt="Imagen Proyecto 2">
-                </a>
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item bg-dark p-3 rounded">
+                    <a href="2/" target="_blank" class="text-decoration-none text-light">
+                        Diseño Web Profesional
+                        <img src="2.png" alt="Imagen Proyecto 2" class="mt-3">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <a href="3/" target="_blank">Luxury Getaways
-                    <img src="3.png" alt="Imagen Proyecto 3">
-                </a>    
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item bg-dark p-3 rounded">
+                    <a href="3/" target="_blank" class="text-decoration-none text-light">
+                        Luxury Getaways
+                        <img src="3.png" alt="Imagen Proyecto 3" class="mt-3">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <a href="4/" target="_blank">LibroPlus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src="4.png" alt="Imagen Proyecto 4">
-                </a>
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item bg-dark p-3 rounded">
+                    <a href="4/" target="_blank" class="text-decoration-none text-light">
+                        LibroPlus
+                        <img src="4.png" alt="Imagen Proyecto 4" class="mt-3">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <a href="5/" target="_blank">App Salud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src="5.png" alt="Imagen Proyecto 5">
-                </a>
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item bg-dark p-3 rounded">
+                    <a href="5/" target="_blank" class="text-decoration-none text-light">
+                        App Salud
+                        <img src="5.png" alt="Imagen Proyecto 5" class="mt-3">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <a href="6/" target="_blank">TechShop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src="6.png" alt="Imagen Proyecto 6">
-                </a>    
+            <div class="col-md-4 mb-4">
+                <div class="portfolio-item bg-dark p-3 rounded">
+                    <a href="6/" target="_blank" class="text-decoration-none text-light">
+                        TechShop
+                        <img src="6.png" alt="Imagen Proyecto 6" class="mt-3">
+                    </a>
+                </div>
             </div>
         </div>
-
-        <br><br><br><br><br><br><br><br>    
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
