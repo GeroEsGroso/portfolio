@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenido a TechShop, tu tienda online para los mejores productos tecnológicos del mercado.">
+    <title>TechShop - Tienda de Tecnología</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #212121;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        header button {
+            background-color: #ff8c00;
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        header button:hover {
+            background-color: #ff6a00;
+        }
+
+        /* Product Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            font-size: 1.8rem;
+            color: #333;
+            padding: 1rem;
+        }
+        .product-card p {
+            font-size: 1rem;
+            color: #666;
+            padding: 0 1rem;
+        }
+        .product-card button {
+            background-color: #ff8c00;
+            color: #fff;
+            padding: 1rem;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 0 10px 10px;
+            font-size: 1.1rem;
+        }
+        .product-card button:hover {
+            background-color: #ff6a00;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 4rem 2rem;
+            background-color: #212121;
+            color: #fff;
+        }
+        .feature {
+            text-align: center;
+            width: 30%;
+        }
+        .feature i {
+            font-size: 3rem;
+            color: #ff8c00;
+            margin-bottom: 1rem;
+        }
+        .feature h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .feature p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        footer p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+        footer a {
+            color: #ff8c00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>TechShop</h1>
+        <p>La mejor tienda online para los productos tecnológicos más innovadores del mercado.</p>
+        <button>Ver Productos</button>
+    </header>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1593642532873-8b12e8c25a3b" alt="Smartphone">
+            <h3>Smartphone 5G</h3>
+            <p>Un teléfono de última generación con cámara ultra nítida, pantalla OLED y rendimiento 5G.</p>
+            <button>Comprar Ahora</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="Laptop">
+            <h3>Laptop Gaming</h3>
+            <p>La laptop perfecta para gamers, con procesador Intel Core i7, 16GB RAM y tarjeta gráfica NVIDIA.</p>
+            <button>Comprar Ahora</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1503182613783-e879450b12b4" alt="Smartwatch">
+            <h3>Smartwatch 4.0</h3>
+            <p>Reloj inteligente con funciones avanzadas de salud y deporte, y conectividad con tu smartphone.</p>
+            <button>Comprar Ahora</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-truck"></i>
+            <h4>Envío Rápido</h4>
+            <p>Recibe tus productos en tiempo récord con nuestro servicio de entrega exprés.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Compra Segura</h4>
+            <p>Compra con total confianza, con pagos seguros y encriptados.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-headset"></i>
+            <h4>Soporte 24/7</h4>
+            <p>Atención al cliente disponible en todo momento para ayudarte con cualquier duda.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechShop. Todos los derechos reservados.</p>
+        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+    </footer>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
