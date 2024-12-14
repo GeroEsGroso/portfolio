@@ -5,196 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tienda ecológica en línea que ofrece productos orgánicos, saludables y sostenibles para tu hogar y bienestar.">
     <title>EcoLife - Productos Ecológicos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f9f6;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            text-align: center;
-            padding: 3rem 0;
-            position: relative;
-        }
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        header button {
-            background-color: #fff;
-            color: #4CAF50;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        header button:hover {
-            background-color: #e6f7e6;
-        }
-
-        /* Featured Products Section */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 4rem 2rem;
-            background-color: #fff;
-        }
-        .product-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 2rem;
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-        .product-card h3 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-        .product-card p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-        .product-card button {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 1rem;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .product-card button:hover {
-            background-color: #45a049;
-        }
-
-        /* Newsletter Section */
-        .newsletter {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .newsletter h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .newsletter p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .newsletter input {
-            padding: 1rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            width: 70%;
-            margin-bottom: 1rem;
-        }
-        .newsletter button {
-            background-color: #fff;
-            color: #4CAF50;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .newsletter button:hover {
-            background-color: #e6f7e6;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        footer p {
-            font-size: 1rem;
-            color: #bbb;
-        }
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
     <!-- Header -->
-    <header>
-        <h1>EcoLife</h1>
-        <p>Tu tienda ecológica en línea, con productos orgánicos, saludables y sostenibles.</p>
-        <button>Explora Nuestros Productos</button>
+    <header class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">EcoLife</h1>
+            <p class="lead">Tu tienda ecológica en línea, con productos orgánicos, saludables y sostenibles.</p>
+            <button class="btn btn-light btn-lg text-success">Explora Nuestros Productos</button>
+        </div>
     </header>
 
     <!-- Featured Products Section -->
-    <section class="products">
-        <div class="product-card">
-            <img src="1.webp" alt="Producto Ecológico 1">
-            <h3>Cosméticos Naturales</h3>
-            <p>Productos de cuidado personal 100% naturales para tu piel.</p>
-            <button>Ver Producto</button>
-        </div>
-        <div class="product-card">
-            <img src="2.jpg" alt="Producto Ecológico 2">
-            <h3>Alimentos Orgánicos</h3>
-            <p>Desde frutas frescas hasta productos enlatados, todo orgánico.</p>
-            <button>Ver Producto</button>
-        </div>
-        <div class="product-card">
-            <img src="3.jpg" alt="Producto Ecológico 3">
-            <h3>Accesorios Eco-Friendly</h3>
-            <p>Accesorios reutilizables y ecológicos para tu hogar.</p>
-            <button>Ver Producto</button>
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="1.webp" class="card-img-top" alt="Producto Ecológico 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cosméticos Naturales</h5>
+                            <p class="card-text">Productos de cuidado personal 100% naturales para tu piel.</p>
+                            <button class="btn btn-success">Ver Producto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="2.jpg" class="card-img-top" alt="Producto Ecológico 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Alimentos Orgánicos</h5>
+                            <p class="card-text">Desde frutas frescas hasta productos enlatados, todo orgánico.</p>
+                            <button class="btn btn-success">Ver Producto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <img src="3.jpg" class="card-img-top" alt="Producto Ecológico 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Accesorios Eco-Friendly</h5>
+                            <p class="card-text">Accesorios reutilizables y ecológicos para tu hogar.</p>
+                            <button class="btn btn-success">Ver Producto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter">
-        <h2>Suscríbete a Nuestro Boletín</h2>
-        <p>Recibe las últimas novedades, promociones y productos ecológicos directamente en tu correo.</p>
-        <input type="email" placeholder="Ingresa tu correo electrónico" required>
-        <button>Suscribirse</button>
+    <section class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">Suscríbete a Nuestro Boletín</h2>
+            <p class="lead mb-4">Recibe las últimas novedades, promociones y productos ecológicos directamente en tu correo.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
+                        <button class="btn btn-light text-success">Suscribirse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 EcoLife. Todos los derechos reservados.</p>
-        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2024 EcoLife. Todos los derechos reservados.</p>
+            <p class="mb-0">
+                <a href="#" class="text-success text-decoration-none">Política de Privacidad</a> |
+                <a href="#" class="text-success text-decoration-none">Términos de Servicio</a>
+            </p>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
